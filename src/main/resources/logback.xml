@@ -14,6 +14,7 @@
 		</rollingPolicy>
 		<encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
       <providers>
+        <logstashMarkers/>
         <mdc/>
         <pattern>
           <pattern>
@@ -25,7 +26,6 @@
             }
           </pattern>
         </pattern>
-        <logstashMarkers/>
         <stackTrace>
           <throwableConverter class="net.logstash.logback.stacktrace.ShortenedThrowableConverter">
             <maxDepthPerThrowable>30</maxDepthPerThrowable>

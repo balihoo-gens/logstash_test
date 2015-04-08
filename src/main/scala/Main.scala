@@ -27,6 +27,7 @@ object logstash_test extends App {
   splog.info("regular message")
   splog.info("message", Json.obj("abc" -> "test"))
   try {
+    throw new Exception("badness")
   } catch {
     case e:Exception =>
       splog.error("really exception happened", e)
